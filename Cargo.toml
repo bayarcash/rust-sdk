@@ -1,0 +1,30 @@
+[package]
+name = "bayarcash"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Rust SDK for the Bayarcash payment gateway — a feature-parity, idiomatic port of the official Bayarcash PHP SDK. Supports API v2 (default) and v3."
+license = "MIT"
+repository = "https://github.com/bayarcash/rust-sdk"
+homepage = "https://bayarcash.com"
+documentation = "https://docs.rs/bayarcash"
+keywords = ["bayarcash", "payment", "fpx", "gateway", "malaysia"]
+categories = ["api-bindings", "web-programming"]
+readme = "README.md"
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "multipart", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hmac = "0.12"
+sha2 = "0.10"
+hex = "0.4"
+thiserror = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+wiremock = "0.6"
+
+[package.metadata.docs.rs]
+all-features = true
