@@ -1,6 +1,6 @@
 [package]
 name = "bayarcash"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 rust-version = "1.75"
 description = "Rust SDK for the Bayarcash payment gateway — a feature-parity, idiomatic port of the official Bayarcash PHP SDK. Supports API v2 (default) and v3."
